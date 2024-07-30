@@ -14,11 +14,8 @@ RUN mkdir -p /root/.stack/global-project/ && \
 git clone https://bitbucket.org/prl_tokyo/BiGUL.git /root/.stack/global-project/BiGUL && \
 cat <<'_EOF_' > /root/.stack/global-project/stack.yaml 
 packages: [BiGUL/Haskell]
-# resolver: ghc-8.0.2
 resolver: 
     url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/12/26.yaml
-# snapshot: lts-22.31
-
 extra-deps:
 _EOF_
 RUN stack install --verbose BiGUL
