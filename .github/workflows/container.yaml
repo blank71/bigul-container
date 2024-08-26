@@ -1,6 +1,10 @@
 name: Publish Docker image to ghcr.io
 
-on: push
+on: 
+  push
+  paths:
+    - ".github/workflows/container.yaml"
+    - "Containerfile"
 
 env:
   REGISTRY: ghcr.io
