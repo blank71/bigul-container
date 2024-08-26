@@ -1,13 +1,13 @@
 FROM registry.fedoraproject.org/fedora
 
 # install packages
-RUN dnf update -y 
-RUN dnf groupinstall -y "Minimal Install" "Development Tools"
-RUN dnf install -y gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs ncurses-static xz perl pkg-config
-RUN curl -sSL https://get.haskellstack.org/ | sh
-RUN echo 'export PATH="/root/.local/bin:$PATH"' >> "/root/.bash_profile"
-RUN dnf clean all
-RUN rm -rf /var/cache/yum
+RUN dnf update -y && \
+dnf groupinstall -y "Minimal Install" "Development Tools" && \
+dnf install -y gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs ncurses-static xz perl pkg-config && \
+curl -sSL https://get.haskellstack.org/ | sh && \
+echo 'export PATH="/root/.local/bin:$PATH"' >> "/root/.bash_profile" && \
+dnf clean all && \
+rm -rf /var/cache/yum
 
 # stack configuration
 RUN mkdir -p /root/.stack/global-project/ && \
