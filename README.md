@@ -1,3 +1,5 @@
+This is bigul container for running and developing. BiGUL is Bidirectional Generic Update Language and you can see the source code from [here](https://bitbucket.org/prl_tokyo/bigul). 
+
 # useage
 
 ```
