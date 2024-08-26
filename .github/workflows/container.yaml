@@ -24,6 +24,11 @@ jobs:
       packages: write
 
     steps:
+      # Register this action before your build step. It will then be executed at the end of the job post-processing.
+      - uses: Kesin11/actions-timeline@v2
+        with:
+          show-waiting-runner: true
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
