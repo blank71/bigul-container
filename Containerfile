@@ -2,7 +2,7 @@ FROM registry.fedoraproject.org/fedora
 
 # install packages
 RUN dnf update -y && \
-dnf groupinstall -y "Minimal Install" "Development Tools" && \
+dnf group install -y "development-tools" && \
 dnf install -y gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs ncurses-static xz perl pkg-config && \
 curl -sSL https://get.haskellstack.org/ | sh && \
 echo 'export PATH="/root/.local/bin:$PATH"' >> "/root/.bash_profile" && \
