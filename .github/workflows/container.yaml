@@ -1,6 +1,7 @@
 name: Publish Docker image to ghcr.io
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - ".github/workflows/container.yaml"
