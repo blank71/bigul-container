@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora
+FROM registry.fedoraproject.org/fedora:42@sha256:49d8eb9a2abb87574ea1da87c7b28cd9fb490d5c3e11b5b45fbb5d0bd494077b
 
 # install packages
 RUN dnf update -y && \
